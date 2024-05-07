@@ -10,7 +10,7 @@ public class testConnection {
 	public static void main(String[] args) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3307/gestion_de_stock", "root", "");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestion_de_stock", "root", "");
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery("show tables;");
 			System.out.println("Connected");
