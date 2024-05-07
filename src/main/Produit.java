@@ -121,7 +121,7 @@ public class Produit extends JFrame implements ActionListener {
 	
 	private void addProduct() {
 		try {
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3307/gestion_de_stock", "root", "");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestion_de_stock", "root", "");
 			
 			String query = "INSERT INTO produits (ID_Produits, Nom_produit, Stock, Prix) VALUES (?, ?, ?, ?)";
 			PreparedStatement pstmt = con.prepareStatement(query);
@@ -150,7 +150,7 @@ public class Produit extends JFrame implements ActionListener {
 	
 	private void modProduct() {
 		try {
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3307/gestion_de_stock", "root", "");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestion_de_stock", "root", "");
 			
 			String query = "UPDATE produits set Nom_produit=?, Stock=?, Prix=? WHERE ID_Produits=?";
 			PreparedStatement pstmt = con.prepareStatement(query);
@@ -179,7 +179,7 @@ public class Produit extends JFrame implements ActionListener {
 	
 	private void delProduct() {
 		try {
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3307/gestion_de_stock", "root", "");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestion_de_stock", "root", "");
 			
 			String query = "DELETE FROM produits WHERE ID_Produits=?";
 			PreparedStatement pstmt = con.prepareStatement(query);
