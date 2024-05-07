@@ -1,5 +1,6 @@
 package main;
 
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,19 +10,45 @@ import javax.swing.JFrame;
 @SuppressWarnings("serial")
 public class MainHub extends JFrame implements ActionListener {
 	
-	JButton button;
-	JButton button2;
+	JButton produitButton;
+	JButton fournisseurButton;
+	JButton ventesButton;
+	JButton rapportsButton;
+	JButton quitButton;
 	
 	MainHub(){
-		button = new JButton();
-		button.setBounds(0, 0, 100, 100);
-		button.addActionListener(this);
-		button.setText("Produit");
+		produitButton = new JButton();
+		produitButton.setBounds(160, 130, 140, 45);
+		produitButton.addActionListener(this);
+		produitButton.setText("Produit");
+		produitButton.setFont(new Font("Ariel",Font.BOLD,24));
 		
-		button2 = new JButton();
-		button2.setBounds(255, 0, 100, 100);
-		button2.addActionListener(this);
-		button2.setText("Quit");
+		fournisseurButton = new JButton();
+		fournisseurButton.setBounds(330,130,185,45);
+		fournisseurButton.addActionListener(this);
+		fournisseurButton.setText("Fournisseur");
+		fournisseurButton.setFont(new Font("Ariel",Font.BOLD,24));
+		fournisseurButton.setEnabled(false);
+		
+		ventesButton = new JButton();
+		ventesButton.setBounds(160,190,135,45);
+		ventesButton.addActionListener(this);
+		ventesButton.setText("Ventes");
+		ventesButton.setFont(new Font("Ariel",Font.BOLD,24));
+		ventesButton.setEnabled(false);
+
+		rapportsButton = new JButton();
+		rapportsButton.setBounds(330,190,140,45);
+		rapportsButton.addActionListener(this);
+		rapportsButton.setText("Rapports");
+		rapportsButton.setFont(new Font("Ariel",Font.BOLD,24));
+		rapportsButton.setEnabled(false);
+		
+		quitButton = new JButton();
+		quitButton.setBounds(250, 350, 140, 45);
+		quitButton.addActionListener(this);
+		quitButton.setText("Quitter");
+		quitButton.setFont(new Font("Ariel",Font.BOLD,24));
 
 		this.setTitle("Gestion de Stock");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -29,8 +56,11 @@ public class MainHub extends JFrame implements ActionListener {
 		this.setResizable(false);
 		this.setSize(640,480);
 		this.setVisible(true);
-		this.add(button);
-		this.add(button2);
+		this.add(produitButton);
+		this.add(fournisseurButton);
+		this.add(ventesButton);
+		this.add(rapportsButton);
+		this.add(quitButton);
 	}
 
 	public static void main(String[] args) {
@@ -40,12 +70,12 @@ public class MainHub extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource()==button) {
+		if(e.getSource()==produitButton) {
 			this.dispose();
-			new TestWindows();
+			new Produit();
 		}
 		
-		if(e.getSource()==button2) {
+		if(e.getSource()==quitButton) {
 			this.dispose();
 		}	
 		
