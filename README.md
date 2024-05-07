@@ -10,13 +10,13 @@ Crée à l'école EFREI Formation d'Ingénieur Informatique.
 
 Les outils requis pour compiler :
 
-* Java Development Kit 21 ou haute
+* Java Development Kit 21 ou supérieur
 * XAMMP avec Apache et MySQL
   > MySQL Port doit être par défaut (Port : 3306)
 
   > MySQL utilise PhpMyAdmin
 * Git
-* MySQL Connector 8.4.0 ou haute
+* MySQL Connector 8.4.0 ou supérieur
 
 Éxécution git requis pour cloner :
 ```
